@@ -24,7 +24,7 @@ import baraka from '../../assets/baraka.svg'
 
 const Footer = () => {
   return (
-    <div>
+    <div >
         <div className='footer__top flex container mx-auto px-5'>
 
 <div className='footer__top__card flex '>
@@ -82,8 +82,8 @@ const Footer = () => {
 
 
         </div>
-
-    <div className='footer container mx-auto px-5'>
+<div className='dark:bg-slate-900'>
+    <div className='footer container mx-auto px-5 dark:bg-slate-900'>
 
 <div className='footer__wrapper flex'>
 
@@ -175,7 +175,7 @@ template</p>
     </div>
 <div className='hr bg-lime-200	'></div>
 
-<div className='footer__bottom container mx-auto px-5 flex justify-between mb-8 '> 
+<div className='footer__bottom container mx-auto px-5 flex justify-between pb-8  '> 
     <div className='footer__b-card '>
         <p>
         © 2022, <span className='text-green-400	'>Nest</span> - HTML Ecommerce Template
@@ -213,6 +213,7 @@ template</p>
 
     </div>
     <p>Up to 15% discount on your first subscribe</p>
+</div>
 </div>
 </div>
     </div>
