@@ -86,15 +86,29 @@ const Header = () => {
             </ul>
           </div>
          
-    <div className='flex gap-2 items-center'>
+    <div className='flex gap-1 items-center'>
+      <div className='book flex gap-4   dark:text-white p-2 '>
+  <div className=' flex gap-4   dark:text-white '>
+              <NavLink className={" text-black dark:text-white  flex gap-1 items-center"} to={"/wishlist"}>
+              <FaRegHeart  className='text-2xl mmm'/><sup className='px-1 py-2 rounded-full mb-3 text-white bg-lime-600'>{wishlist.length}</sup>
+              </NavLink>
+
+              <NavLink className={" text-black dark:text-white  flex gap-0 items-center"} to={"/card"}>
+              <IoCartOutline  className='text-2xl mmm'/>
+<sup className='px-1 py-2 rounded-full
+ mb-3
+ text-white bg-lime-600'>{cart.length}</sup>
+ </NavLink>
+              </div>
+      </div>
       <button
         onClick={toggleDarkMode}
         className="p-2  text-dark rounded-lg"
       >
-<FaSun className='text-dark text-3xl'/>
+<FaSun className='text-dark text-3xl mmm'/>
 </button>
           <div onClick={toggleMenu} className="navbar__menu cursor-pointer text-2xl">
-          <IoMenu className='text-4xl'/>
+          <IoMenu className='text-4xl mmm'/>
           </div>
 </div>
         </nav>

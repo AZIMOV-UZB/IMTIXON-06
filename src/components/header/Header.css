@@ -10,7 +10,13 @@
     display: none;
 }
 
+.book{
+    display: none !important;
+}
 
+.bb{
+    display: none !important;
+}
 
 @media (max-width:1280px){
 .search__bag{
@@ -55,13 +61,16 @@
     .navbar__menu {
         display: block;
     }
-  
+
+.book{
+    display: block !important;
+}
 }
 
 
 
 
-@media (max-width:500px){
+@media (max-width:700px){
 .h_map{
     display: none !important;
 }
@@ -70,8 +79,11 @@
 
 
 
-@media (max-width:350px){
+@media (max-width:550px){
     .navbar__logo{
-width: 150px !important;
+width: 120px !important;
+    }
+    .mmm {
+        font-size: 15px !important;
     }
     }

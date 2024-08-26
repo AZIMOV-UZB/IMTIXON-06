@@ -50,7 +50,7 @@ const Products = ({ data, title }) => {
               }
               className="rounded-[0_20px_0_15px] px-[10px] text-[12px] text-[#fff]"
             >
-              <FaHeart className="text-black text-[20px] mt-2 mr-1" />
+              <FaHeart className="text-black text-[20px] mt-2 mr-1 dark:text-white" />
             </button>
           </div>
           <div>
