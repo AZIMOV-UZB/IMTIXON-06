@@ -1,20 +1,17 @@
-import { useStateValue } from "@/components/context/Index";
+import Empty from "@/components/empty/empty";
 import React from "react";
-import Empty  from "@/components/empty/empty";
 
 const NewCart = () => {
-  let [data,_] = useStateValue();
-  console.log(data);
 
   return (
     <div>
-      {data.cart.length ? (
-        <Cart data={data.Cart} />
-      ) : (
-        <Empty
-          url="https://cdn-icons-png.flaticon.com/512/11329/11329060.png"
-          title="Savatcha bo'sh"
-        />
+      {
+      (
+      <Empty
+      url="https://cdn-icons-png.flaticon.com/512/11329/11329060.png"
+      title="Savatcha bo'sh"
+      />
+        
       )}
     </div>
   );

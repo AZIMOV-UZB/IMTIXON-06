@@ -1,5 +1,6 @@
 import React, { useState,memo } from 'react'
 import "./Header.css"
+import { useStateValue } from '../context/Index';
 import { IoIosArrowDown } from "react-icons/io";
 import navlogo from "../../assets/Header.svg"
 import { IoMenu } from "react-icons/io5";
@@ -20,7 +21,8 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
- 
+  const [{ wishlist,cart}, dispatch] = useStateValue();
+
   const toggleDarkMode = () => {
     window.document.body.classList.toggle("dark");
     console.log(1);
@@ -67,7 +69,7 @@ const Header = () => {
           </div>
             <ul className="navbar__collection flex gap-4   dark:text-white dark:bg-black p-3 	">
               <NavLink className={" text-black dark:text-white  flex gap-1 items-center"} to={"/wishlist"}>
-              <FaRegHeart  className='text-2xl'/><sup className='px-1 py-2 rounded-full mb-3 text-white bg-lime-600'>0</sup>
+              <FaRegHeart  className='text-2xl'/><sup className='px-1 py-2 rounded-full mb-3 text-white bg-lime-600'>{wishlist.length}</sup>
              <p className='text-xs'> Wishlist</p>
               </NavLink>
 
@@ -75,7 +77,7 @@ const Header = () => {
               <IoCartOutline  className='text-2xl'/>
 <sup className='px-1 py-2 rounded-full
  mb-3
- text-white bg-lime-600'>0</sup>
+ text-white bg-lime-600'>{cart.length}</sup>
      <p className='text-xs'> Card</p>   </NavLink>
 
               <NavLink className={" text-black dark:text-white  flex gap-1 items-center"} to={"/login"}>
