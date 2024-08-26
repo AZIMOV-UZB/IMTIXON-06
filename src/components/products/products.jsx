@@ -8,8 +8,8 @@ import { useStateValue } from "../context/Index";
 
 
 const Products = ({ data, title }) => {
-  // const [{ wishlist }, dispatch] = useStateValue();
-  // console.log(data);
+  const [{ wishlist }, dispatch] = useStateValue();
+  console.log(data);
 
   let items = data?.map((product) => {
     let percentageCount =
